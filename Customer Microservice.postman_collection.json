@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "47eb1484-0772-44f1-b7d0-dfe91ce058cb",
+		"name": "Customer Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33319601"
+	},
+	"item": [
+		{
+			"name": "find all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/customer/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customer",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/customer/get-id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customer",
+						"get-id=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Orders by Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/customer/get-all-orders-by-customer=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customer",
+						"get-all-orders-by-customer=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idNumber\": \"12345678\",\r\n  \"firstName\": \"Robb\",\r\n  \"lastName\": \"Stark\",\r\n  \"phoneNumber\": \"123456789\",\r\n  \"address\": \"Winterfell\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/customer/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idNumber\": \"87654321\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Snow\",\r\n  \"phoneNumber\": \"123456789\",\r\n  \"birthDate\": \"1980-01-01\",\r\n  \"specialty\": \"Cardiologist\",\r\n  \"licenseNumber\": \"LIC123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/customer/edit-1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"customer",
+						"edit-1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
